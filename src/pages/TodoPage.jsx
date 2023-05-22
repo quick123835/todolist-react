@@ -117,7 +117,6 @@ const TodoPage = () => {
 
   const handleDelete = ({ id }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
-    console.log(todos.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -137,7 +136,7 @@ const TodoPage = () => {
         onSave={handleSave}
         onDelete={handleDelete}
       />
-      <Footer />
+      <Footer todos={todos} />
     </div>
   );
 };
